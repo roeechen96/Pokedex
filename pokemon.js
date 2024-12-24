@@ -47,5 +47,16 @@ function displayPokemons(pokemon) {
             <p class="body3-fonts">#${pokemon.name}</p>
         </div>
     `;
+
+    listItem.addEventListener("click", async () => {
+      const success = await
+      fetchPokemonDataBEforeRedirect(pokemonID).then((success) => {
+        if (success) {
+          window.location.href = `./detail.html?id=${pokemonID}`;
+        }
+      });
+    });
+
+    listWrapper.appendChild(listItem);
   });
 }
