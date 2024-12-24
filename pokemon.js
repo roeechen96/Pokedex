@@ -34,7 +34,7 @@ async function fetchPokemonDataBEforeRedirect(id) {
 function displayPokemons(pokemon) {
   listWrapper.innerHTML = "";
   pokemon.forEach((pokemon) => {
-    const pokemonId = pokemon.url.split("/")[6];
+    const pokemonId = pokemon.url.split("/")[pokemonIdPosition];
     const listItem = document.createElement("div");
     listItem.className = "list-item";
     listItem.innerHTML = `
