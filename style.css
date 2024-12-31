@@ -3,3 +3,286 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+:root {
+    --identity-primary: #dc0a2d;
+
+    --grayscale-dark: #212121;
+    --grayscale-medium: #666666;
+    --grayscale-light: #e0e0e0;
+    --grayscale-background: #efefef;
+    --grayscale-white: #ffffff;
+
+    --headline-font-size: 24px;
+    --body1-font-size: 14px;
+    --body2-font-size: 12px;
+    --body3-font-size: 10px;
+    --caption-font-size: 8px;
+
+    --headline-line-height: 32px;
+    --common-line-height: 16px;
+    --caption-line-height: 12px;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --drop-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    --drop-shadow-hover: 0px 3px 12px 3px rgba(0, 0, 0, 0.2);
+    --drop-shadow-inner: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+.body1-fonts,
+.body2-fonts,
+.body3-fonts,
+.caption-fonts {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--headline-font-size);
+    line-height: var(--headline-line-height);
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: var(--body1-font-size);
+}
+
+h3 {
+    font-size: var(--body2-font-size);
+}
+
+h4 {
+    font-size: var(--body3-font-size);
+}
+
+.body1-fonts {
+    font-size: var(--body1-font-size);
+}
+
+.body2-fonts {
+    font-size: var(--body2-font-size);
+}
+
+.body3-fonts {
+    font-size: var(--body3-font-size);
+}
+
+.caption-fonts {
+    font-size: var(--caption-font-size);
+    line-height: var(--caption-line-height);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--grayscale-background);
+    color: var(--grayscale-dark);
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    background-color: var(--identity-primary);
+    background-size: cover;
+}
+
+.header {
+    width: 90%;
+}
+
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-wrapper>img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo-wrapper>h1 {
+    color: var(--grayscale-white);
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.search-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--grayscale-white);
+    border-radius: 16px;
+    box-shadow: var(--drop-shadow-inner);
+}
+
+.search-wrap input {
+    flex: 1;
+    border: none;
+}
+
+.search-wrap img {
+    margin-right: 8px;
+}
+
+.search-close-icon {
+    cursor: pointer;
+}
+
+/* .sort-wrap {
+    background-color: var(--grayscale-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: var(--drop-shadow-inner);
+}
+
+/* ===== Pokemon List ===== */
+.pokemon-list {
+    background-color: var(--grayscale-white);
+    box-shadow: var(--drop-shadow-inner);
+    border-radius: 0.75rem;
+    min-height: 85%;
+    width: 95%;
+    padding: 1rem;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+
+.list-item {
+    text-align: center;
+    width: 8.85rem;
+    height: 8.85rem;
+    cursor: pointer;
+    background-color: var(--grayscale-white);
+    border-radius: 8px;
+    box-shadow: var(--drop-shadow);
+} 
+
+.list-item img {
+    width: 72px;
+    height: 72px;
+}
+
+/* .name-wrap {
+    padding: 0.5rem;
+    background-color: var(--grayscale-background);
+    border-radius: 4px;
+    color: var(--grayscale-dark);
+}
+
+/* ===== Pokemon Details ===== */
+/* .detail-main {
+    padding: 1rem;
+} */
+
+/* .detail-main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+} */
+
+/* .detail-main .featured-img {
+    position: relative;
+}
+
+.featured-img img {
+    max-width: 100%;
+}
+
+.power-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.power-wrapper p {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-bold);
+    background-color: #74cb48;
+    color: var(--grayscale-white);
+} */
+
+/* ===== Utility for Buttons ===== */
+/* .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow img {
+    width: 28px;
+    filter: brightness(0) grayscale(1) invert(1);
+}
+
+.arrow.left {
+    left: -2rem;
+}
+
+.arrow.right {
+    right: -2rem;
+} */
