@@ -182,7 +182,7 @@ input:focus-visible {
     cursor: pointer;
 }
 
-/* .sort-wrap {
+.sort-wrap {
     background-color: var(--grayscale-white);
     border-radius: 50%;
     display: flex;
@@ -219,14 +219,14 @@ input:focus-visible {
     background-color: var(--grayscale-white);
     border-radius: 8px;
     box-shadow: var(--drop-shadow);
-} 
+}
 
 .list-item img {
     width: 72px;
     height: 72px;
 }
 
-/* .name-wrap {
+.name-wrap {
     padding: 0.5rem;
     background-color: var(--grayscale-background);
     border-radius: 4px;
@@ -234,18 +234,18 @@ input:focus-visible {
 }
 
 /* ===== Pokemon Details ===== */
-/* .detail-main {
+.detail-main {
     padding: 1rem;
-} */
+}
 
-/* .detail-main .header {
+.detail-main .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-} */
+}
 
-/* .detail-main .featured-img {
+.detail-main .featured-img {
     position: relative;
 }
 
@@ -265,11 +265,12 @@ input:focus-visible {
     font-weight: var(--font-weight-bold);
     background-color: #74cb48;
     color: var(--grayscale-white);
-} */
+}
+
 
 /* ===== Utility for Buttons ===== */
-/* .arrow {
-    position: absolute;
+.arrow {
+    position: flex;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -280,9 +281,9 @@ input:focus-visible {
 }
 
 .arrow.left {
-    left: -2rem;
+    left: 10px;
 }
 
 .arrow.right {
-    right: -2rem;
-} */
+    right: 10px;
+}
