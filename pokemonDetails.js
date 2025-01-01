@@ -52,7 +52,10 @@ function fetchJSON(url) {
 
 function configureNavigation(id) {
     setNavigation("#leftArrow", id > 1 ? () => navigateToPokemon(id - 1) : null);
-    setNavigation("#rightArrow", id < MAX_POKEMONS ? () => navigateToPokemon(id + 1) : null);
+    setNavigation(
+        "#rightArrow",
+        id < MAX_POKEMONS ? () => navigateToPokemon(id + 1) : null
+    );
 }
 
 function setNavigation(selector, callback) {
@@ -106,7 +109,10 @@ function renderImage(id, name) {
 function renderTypes(types) {
     const typeWrapper = document.querySelector(".power-wrapper");
     typeWrapper.innerHTML = types
-        .map(({ type }) => `<p class="body3-fonts type ${type.name}">${capitalize(type.name)}</p>`)
+        .map(
+            ({ type }) =>
+                `<p class="body3-fonts type ${type.name}">${capitalize(type.name)}</p>`
+        )
         .join("");
 }
 
@@ -125,13 +131,15 @@ function renderAbilities(abilities) {
 function renderStatBars(stats) {
     const statsWrapper = document.querySelector(".stats-wrapper");
     statsWrapper.innerHTML = stats
-        .map(({ stat, base_stat }) => `
+        .map(
+            ({ stat, base_stat }) => `
             <div class="stats-wrap">
                 <p class="body3-fonts stats">${statNameMapping[stat.name]}</p>
                 <p class="body3-fonts">${String(base_stat).padStart(3, "0")}</p>
                 <progress class="progress-bar" value="${base_stat}" max="100"></progress>
             </div>
-        `)
+        `
+        )
         .join("");
 }
 
@@ -141,8 +149,12 @@ function renderFlavorText(species) {
 }
 
 function getFlavorText(species) {
-    const entry = species.flavor_text_entries.find((e) => e.language.name === "en");
-    return entry ? entry.flavor_text.replace(/\f/g, " ") : "No description available.";
+    const entry = species.flavor_text_entries.find(
+        (e) => e.language.name === "en"
+    );
+    return entry
+        ? entry.flavor_text.replace(/\f/g, " ")
+        : "No description available.";
 }
 
 function capitalize(str) {
